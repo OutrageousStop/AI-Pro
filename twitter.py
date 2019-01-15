@@ -20,8 +20,9 @@ def search(keyword):
         for tweet in ts.search_tweets_iterable(tso):
             tweets.append('@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
 
+        return tweets
     except TwitterSearchException as e: # take care of all those ugly errors if there are some
-        print(e)
+        return e
 
 
 if __name__ == "__main__":

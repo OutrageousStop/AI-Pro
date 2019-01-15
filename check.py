@@ -10,7 +10,7 @@ class App1(QWidget):
     
     def initUI(self):
         self.setWindowTitle(self.title)
-        self.setGeometry(150, 150, 200, 100)
+        self.setGeometry(150, 150, 800, 600)
 
         self.btn = QPushButton("Enter",self)
         self.textbox = QLineEdit(self)

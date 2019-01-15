@@ -12,11 +12,12 @@ class App(QWidget):
     
     def initUI(self):
         self.setWindowTitle(self.title)
-        self.setGeometry(150, 150, 200, 100)
+        self.setGeometry(150, 150, 800, 600)
 
         b = QPushButton("Check",self)
         c = QPushButton("Fetch",self)
-
+        b.resize(b.sizeHint())
+        c.resize(c.sizeHint())
         b.clicked.connect(self.on_click1)
         c.clicked.connect(self.on_click2)
 

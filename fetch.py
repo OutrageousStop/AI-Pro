@@ -1,5 +1,6 @@
 import sys
 from PyQt5.QtWidgets import *
+from twitter import search
 
 class App2(QWidget):
 
@@ -10,7 +11,7 @@ class App2(QWidget):
     
     def initUI(self):
         self.setWindowTitle(self.title)
-        self.setGeometry(150, 150, 200, 100)
+        self.setGeometry(150, 150, 800, 600)
 
         self.btn = QPushButton("Enter",self)
         self.textbox = QLineEdit(self)
@@ -23,9 +24,9 @@ class App2(QWidget):
 
         self.setLayout(layout)
         self.show()
-
     def on_click(self):
-        msg = QMessageBox.about(self, "AI", "This tweet has: <br> 20% positive feedback <br> 50% neutral feedback <br> 30% negative feedback")
+        search(self.textbox.text())
+        # msg = QMessageBox.about(self, "AI", "This tweet has: <br> 20% positive feedback <br> 50% neutral feedback <br> 30% negative feedback")
         msg.show()
         
 def fetch():

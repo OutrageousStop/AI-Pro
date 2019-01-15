@@ -15,10 +15,10 @@ def search(keyword):
             access_token = '1040904429333929986-IyGhvu579GFEqZjlDeSyLTaHdQSJ5a',
             access_token_secret = 'bI4gto3QC0gk3SPJDZKl0iJNSJ92ErQDD4feolKHXEKV4'
         )
-
+        tweets = []
         # this is where the fun actually starts :)
         for tweet in ts.search_tweets_iterable(tso):
-            print( '@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
+            tweets.append('@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
 
     except TwitterSearchException as e: # take care of all those ugly errors if there are some
         print(e)

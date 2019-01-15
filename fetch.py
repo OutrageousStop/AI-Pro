@@ -14,7 +14,7 @@ class App2(QWidget):
 
         self.btn = QPushButton("Enter",self)
         self.textbox = QLineEdit(self)
-        self.textbox.setPlaceholderText("Enter a keyword") 
+        self.textbox.setPlaceholderText("Enter the keywords seperated by space") 
         self.btn.clicked.connect(self.on_click)
 
         layout = QVBoxLayout()

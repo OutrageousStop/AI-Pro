@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 from twitter import search
+import tex
 
 class App2(QWidget):
 
@@ -24,12 +25,13 @@ class App2(QWidget):
 
         self.setLayout(layout)
         self.show()
+
     def on_click(self):
-        search(self.textbox.text())
-        # msg = QMessageBox.about(self, "AI", "This tweet has: <br> 20% positive feedback <br> 50% neutral feedback <br> 30% negative feedback")
-        msg.show()
-        
-def fetch():
-    app2 = QApplication(sys.argv)
-    ex2 = App2()
-    sys.exit(app2.exec_())
+        self.m = str(search(self.textbox.text()))
+    #    self.temp = tex.ExampleWindow("Tweets related to {}".format(self.textbox.text()),self.m)
+        self.temp = tex.ExampleWindow("tweets related to %s" % self.textbox.text(), self.m)
+
+# def fetch():
+#     app2 = QApplication(sys.argv)
+#     ex2 = App2()
+#     sys.exit(app2.exec_())

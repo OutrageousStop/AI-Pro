@@ -1,5 +1,4 @@
 from TwitterSearch import *
-import fetch
 
 def search(keyword):
     try:
@@ -18,7 +17,7 @@ def search(keyword):
         tweets = []
         # this is where the fun actually starts :)
         for tweet in ts.search_tweets_iterable(tso):
-            tweets.append('@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
+            tweets.append('@%s tweeted: %s (end)' % ( tweet['user']['screen_name'], tweet['text'] ) )
 
         return tweets
     except TwitterSearchException as e: # take care of all those ugly errors if there are some
@@ -26,4 +25,4 @@ def search(keyword):
 
 
 if __name__ == "__main__":
-    search('india')
+    print(search(input("Enter keyword: ")))

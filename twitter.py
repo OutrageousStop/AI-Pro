@@ -1,5 +1,4 @@
 from TwitterSearch import *
-import fetch
 
 def search(keyword):
     try:
@@ -26,4 +25,4 @@ def search(keyword):
 
 
 if __name__ == "__main__":
-    search('india')
+    print(search(input("Enter keyword: ")))

@@ -6,16 +6,12 @@ from PyQt5.QtCore import QSize
 
 class ExampleWindow(QMainWindow):
     def __init__(self,x,y):
-        QMainWindow.__init__(self)
-
-        #self.setMinimumSize(QSize(440, 240))    
+        QMainWindow.__init__(self)   
         self.setWindowTitle(x) 
         self.resize(1980,1080)
-        # Add text field
         self.b = QPlainTextEdit(self)
         self.b.setPlainText("".join([i + str('\n') for i in y.split('(end)')]))
         self.b.setReadOnly(True)
-        #self.b.move(10,10)
         self.b.resize(1980, 1080)
         self.show()
 

@@ -1,5 +1,6 @@
 import sys
 from PyQt5.QtWidgets import *
+import speech
 
 class App1(QWidget):
 
@@ -13,12 +14,18 @@ class App1(QWidget):
         self.setGeometry(150, 150, 800, 600)
 
         self.btn = QPushButton("Enter",self)
+        self.vbtn = QPushButton("Voice",self)
         self.textbox = QLineEdit(self)
         self.textbox.setPlaceholderText("Enter a tweet") 
         self.btn.clicked.connect(self.on_click)
+        self.vbtn.clicked.connect(self.voice)
+
+        hl = QHBoxLayout()
+        hl.addWidget(self.textbox)
+        hl.addWidget(self.vbtn)
 
         layout = QVBoxLayout()
-        layout.addWidget(self.textbox)
+        layout.addLayout(hl)
         layout.addWidget(self.btn)
 
         self.setLayout(layout)
@@ -26,8 +33,13 @@ class App1(QWidget):
 
     def on_click(self):
         QMessageBox.about(self, "AI", "This tweet is ...")
+
+    def voice(self):
+        self.textbox.setText(speech.lis())
         
-def check():
+'''def check():
     app1 = QApplication(sys.argv)
     ex1 = App1()
     sys.exit(app1.exec_())
+
+check()'''

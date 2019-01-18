@@ -19,7 +19,7 @@ class ExampleWindow(QMainWindow):
         self.b.resize(1980, 1080)
         self.show()
 
-if __name__ == "__main__":
+'''if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     mainWin = ExampleWindow('add','sdsd')
-    sys.exit( app.exec_() )
+    sys.exit( app.exec_() )'''

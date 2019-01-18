@@ -24,5 +24,5 @@ def search(keyword):
         return e
 
 
-if __name__ == "__main__":
-    print(search(input("Enter keyword: ")))
+'''if __name__ == "__main__":
+    print(search(input("Enter keyword: ")))'''

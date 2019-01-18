@@ -35,6 +35,7 @@ class App2(QWidget):
 
     def on_click(self):
         self.m = str(search(self.textbox.text()))
+<<<<<<< HEAD
     #    self.temp = tex.ExampleWindow("Tweets related to {}".format(self.textbox.text()),self.m)
         self.temp = tex.ExampleWindow("Tweets related to %s" % self.textbox.text(), self.m)
 
@@ -47,3 +48,6 @@ class App2(QWidget):
     sys.exit(app2.exec_())
 
 fetch()'''
+=======
+        self.temp = tex.ExampleWindow("tweets related to %s" % self.textbox.text(), self.m)
+>>>>>>> c9c66fff2e356e961f17b1d860a3175133fd557e

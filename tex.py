@@ -10,7 +10,7 @@ class ExampleWindow(QMainWindow):
         self.setWindowTitle(x) 
         self.resize(1980,1080)
         self.b = QPlainTextEdit(self)
-        self.b.setPlainText("".join([i + str('\n') for i in y.split('(end)')]))
+        self.b.setPlainText("".join([i + str('\n\n') for i in y.split('(end)')]))
         self.b.setReadOnly(True)
         self.b.resize(1980, 1080)
         self.show()

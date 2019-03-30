@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import *
 from twitter import search
 import tex
 import speech
+import table
 
 class App2(QWidget):
 
@@ -34,16 +35,16 @@ class App2(QWidget):
         self.show()
 
     def on_click(self):
-        self.m = str(search(self.textbox.text()))
-    #    self.temp = tex.ExampleWindow("Tweets related to {}".format(self.textbox.text()),self.m)
-        self.temp = tex.ExampleWindow("Tweets related to %s" % self.textbox.text(), self.m)
+        #self.m = str(search(self.textbox.text()))
+        #self.temp = tex.ExampleWindow("Tweets related to %s" % self.textbox.text(), self.m)
+        self.temp = table.App("Tweets related to %s" % self.textbox.text(), self.textbox.text())
 
     def voice(self):
         self.textbox.setText(speech.lis())
 
-'''def fetch():
+def fetch():
     app2 = QApplication(sys.argv)
     ex2 = App2()
     sys.exit(app2.exec_())
 
-fetch()'''
+fetch()

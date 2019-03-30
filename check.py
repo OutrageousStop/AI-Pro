@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 import speech
+from load import predict
 
 class App1(QWidget):
 
@@ -32,14 +33,14 @@ class App1(QWidget):
         self.show()
 
     def on_click(self):
-        QMessageBox.about(self, "AI", "This tweet is ...")
+        QMessageBox.about(self, "AI", str(predict(self.textbox.text())))
 
     def voice(self):
         self.textbox.setText(speech.lis())
         
-'''def check():
+def check():
     app1 = QApplication(sys.argv)
     ex1 = App1()
     sys.exit(app1.exec_())
 
-check()'''
+check()

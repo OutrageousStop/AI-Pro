@@ -1,4 +1,7 @@
 ### AI bot for tweet classification
 
-start the app.py 
+To run the application
+Works with Python3 and PyQT4
+    python3 run.py
 
+The user needs to enter a keyword (through keyboard or voice), and the program will fetch the related tweets and categories it to positive, negative or neutral.
